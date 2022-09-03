@@ -32,6 +32,7 @@ export const getASNTS = token => {
       .get("http://127.0.0.1:8000/assignments/")
       .then(res => {
         const assignments = res.data;
+        console.log(assignments)
         dispatch(getASNTListSuccess(assignments));
       })
       .catch(err => {
